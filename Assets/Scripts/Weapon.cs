@@ -9,9 +9,11 @@ public class Weapon : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform spawnPoint;
     // Start is called before the first frame update
-    void Start()
+   
+    private Color GetRandomColor()
     {
-        
+        // Generar un color aleatorio
+        return new Color(Random.value, Random.value, Random.value);
     }
 
     // Update is called once per frame
@@ -23,9 +25,24 @@ public class Weapon : MonoBehaviour
             newBullet.transform.position = spawnPoint.position;
             newBullet.transform.rotation = spawnPoint.rotation;
             newBullet.GetComponent<Rigidbody>().AddForce(spawnPoint.transform.forward*100.0f);
-
+            StartCoroutine(CR_WaitColor(newBullet));
+            Destroy(newBullet, 4.0f);
         }
 
         
+    }
+
+    IEnumerator CR_WaitColor(GameObject newBullet)
+    {
+        while (true)
+        {
+            newBullet.GetComponent<MeshRenderer>().material.color = GetRandomColor();
+            yield return new WaitForSeconds(0.5f);
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+
+        Destroy(this.gameObject);
     }
 }
