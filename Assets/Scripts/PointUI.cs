@@ -26,4 +26,5 @@ public class PointUI : MonoBehaviour
         PointManager.instance.RemovePoints(5);
 
     }
+    public void OnClick_WinAnahuacEvent()
 }
