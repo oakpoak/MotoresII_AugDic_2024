@@ -27,4 +27,5 @@ public class PointUI : MonoBehaviour
 
     }
     public void OnClick_WinAnahuacEvent()
+    { }
 }
