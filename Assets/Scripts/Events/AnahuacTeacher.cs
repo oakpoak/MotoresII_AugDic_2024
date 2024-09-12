@@ -3,16 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AnahuacTeacher : MonoBehaviour
+    
 {
-    // Start is called before the first frame update
+    private Image imagen;
+
+    
     void Start()
     {
+        EventManager.m_Instance.AddListener<Event_NoLlegoElProfeEvent>(MeVoyACasa);
         
     }
 
     // Update is called once per frame
-    void Update()
+    public void MeVoyACasa(Event_NoLlegoElProfeEvent _event)
     {
-        
+        object[] parameters = _event.GetParameters();
+        Debug.Log("Me voy a casa");
     }
 }
