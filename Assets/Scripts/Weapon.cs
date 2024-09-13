@@ -26,10 +26,10 @@ public class Weapon : MonoBehaviour
             newBullet.transform.rotation = spawnPoint.rotation;
             newBullet.GetComponent<Rigidbody>().AddForce(spawnPoint.transform.forward*100.0f);
             StartCoroutine(CR_WaitColor(newBullet));
-            Destroy(newBullet, 4.0f);
+            StartCoroutine(CR_Destroy(newBullet));
         }
 
-        
+
     }
 
     IEnumerator CR_WaitColor(GameObject newBullet)
@@ -40,9 +40,15 @@ public class Weapon : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
         }
     }
-    private void OnTriggerEnter(Collider other)
-    {
 
-        Destroy(this.gameObject);
+    IEnumerator CR_Destroy(GameObject newBullet)
+    {
+        yield return new WaitForSeconds(4.0f);
+        //Destroy(newBullet);
+        PoolManager.Instance.ReturnObjectToPool(newBullet);
     }
+
+
+        
+    
 }

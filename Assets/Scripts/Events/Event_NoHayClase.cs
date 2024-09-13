@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Event_NoHayClase : MonoBehaviour
+public class Event_NoHayClase : GameEvent
 {
     // Start is called before the first frame update
     void Start()

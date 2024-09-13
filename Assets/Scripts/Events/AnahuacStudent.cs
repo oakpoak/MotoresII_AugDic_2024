@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AnahuacStudent : MonoBehaviour
 {
@@ -9,8 +10,8 @@ public class AnahuacStudent : MonoBehaviour
     void Start()
     {
         imagen = GetComponent<Image>();
-        EventManager.m_Instance.AddListener<Events>(MeVoyACasa);
-        EventManager.m_Instance.AddListener<Events>(MeQuedoEnCasa);
+        EventManager.m_Instance.AddListener<Event_NoLlegoElProfeEvent>(MeVoyACasa);
+        EventManager.m_Instance.AddListener<Event_NoHayClase>(MeQuedoEnCasa);
     }
 
 
