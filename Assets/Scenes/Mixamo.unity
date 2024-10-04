@@ -208,8 +208,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 576460699}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.029237315, y: 0.9703127, z: -0.15410069, w: -0.18409629}
-  m_LocalPosition: {x: 1.0323201, y: 1.6287831, z: 3.209365}
+  m_LocalRotation: {x: -0.06521021, y: 0.9267484, z: -0.19057351, w: -0.31712267}
+  m_LocalPosition: {x: 0.60810125, y: 1.7963005, z: 1.4731256}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -330,6 +330,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 578508774}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 69964161c12a5604cbebd1a818e3b998,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 578508775}
   m_SourcePrefab: {fileID: 100100000, guid: 69964161c12a5604cbebd1a818e3b998, type: 3}
 --- !u!1 &578508773 stripped
 GameObject:
@@ -346,18 +350,42 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 578508773}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
+  m_Avatar: {fileID: 9000000, guid: 69964161c12a5604cbebd1a818e3b998, type: 3}
   m_Controller: {fileID: 9100000, guid: cefc2b57b290edc40807043238ec7b4e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
-  m_WarningMessage: 
+  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
+    are already bound by a Humanoid avatar. These transforms can only be changed
+    by Humanoid clips.\n\tTransform 'mixamorig:Hips'\n\tTransform 'mixamorig:LeftFoot'\n\tTransform
+    'mixamorig:LeftHandThumb2'\n\tTransform 'mixamorig:LeftHandIndex1'\n\tTransform
+    'mixamorig:LeftHandPinky2'\n\tTransform 'mixamorig:RightHandRing2'\n\tTransform
+    'mixamorig:Spine1'\n\tTransform 'mixamorig:LeftToeBase'\n\tTransform 'mixamorig:LeftHandThumb3'\n\tTransform
+    'mixamorig:RightArm'\n\tand more ...\n\tFrom animation clip 'UnityIdle'\n\tFrom
+    animation clip 'UnityRun'\n\tFrom animation clip 'UnityWalking'\n\tFrom animation
+    clip 'UnityWalking'\n\tFrom animation clip 'UnityRun'"
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &578508775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578508773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcea954e5a704104b85012917e38b6a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  acceleration: 2
+  deceleration: 2
+  maxWalkVelocity: 0.5
+  maxRunVelocity: 2
 --- !u!1 &1364604819
 GameObject:
   m_ObjectHideFlags: 0
@@ -476,6 +504,133 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!1001 &1599299707
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: ef136c61f8dd84c4bb9f3a83ff56e8d3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.98579216
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ef136c61f8dd84c4bb9f3a83ff56e8d3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ef136c61f8dd84c4bb9f3a83ff56e8d3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.012966275
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ef136c61f8dd84c4bb9f3a83ff56e8d3,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ef136c61f8dd84c4bb9f3a83ff56e8d3,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ef136c61f8dd84c4bb9f3a83ff56e8d3,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ef136c61f8dd84c4bb9f3a83ff56e8d3,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ef136c61f8dd84c4bb9f3a83ff56e8d3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ef136c61f8dd84c4bb9f3a83ff56e8d3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ef136c61f8dd84c4bb9f3a83ff56e8d3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef136c61f8dd84c4bb9f3a83ff56e8d3,
+        type: 3}
+      propertyPath: m_Name
+      value: Ch03_nonPBR
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ef136c61f8dd84c4bb9f3a83ff56e8d3,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2098802905}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ef136c61f8dd84c4bb9f3a83ff56e8d3,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2098802907}
+  m_SourcePrefab: {fileID: 100100000, guid: ef136c61f8dd84c4bb9f3a83ff56e8d3, type: 3}
+--- !u!1 &2098802904 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ef136c61f8dd84c4bb9f3a83ff56e8d3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1599299707}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2098802905
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2098802904}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: ef136c61f8dd84c4bb9f3a83ff56e8d3, type: 3}
+  m_Controller: {fileID: 9100000, guid: cefc2b57b290edc40807043238ec7b4e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
+    are already bound by a Humanoid avatar. These transforms can only be changed
+    by Humanoid clips.\n\tTransform 'mixamorig:Hips'\n\tTransform 'mixamorig:LeftFoot'\n\tTransform
+    'mixamorig:LeftHandThumb2'\n\tTransform 'mixamorig:LeftHandIndex1'\n\tTransform
+    'mixamorig:LeftHandPinky2'\n\tTransform 'mixamorig:RightHandRing2'\n\tTransform
+    'mixamorig:Spine1'\n\tTransform 'mixamorig:LeftToeBase'\n\tTransform 'mixamorig:LeftHandThumb3'\n\tTransform
+    'mixamorig:RightArm'\n\tand more ...\n\tFrom animation clip 'UnityIdle'\n\tFrom
+    animation clip 'UnityRun'\n\tFrom animation clip 'UnityWalking'\n\tFrom animation
+    clip 'UnityWalking'\n\tFrom animation clip 'UnityRun'"
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2098802907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2098802904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcea954e5a704104b85012917e38b6a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  acceleration: 2
+  deceleration: 2
+  maxWalkVelocity: 0.5
+  maxRunVelocity: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -483,3 +638,4 @@ SceneRoots:
   - {fileID: 576460702}
   - {fileID: 1364604821}
   - {fileID: 578508772}
+  - {fileID: 1599299707}
