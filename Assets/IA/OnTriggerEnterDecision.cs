@@ -10,13 +10,17 @@ public class OnTriggerEnterDecision : AIDecision
         return hasPlayerEnter;
 
     }
+    public void Inicialization()
+    {
+    hasPlayerEnter = false; 
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
-            _brain.Target = other.transform;
             hasPlayerEnter = true;
+            _brain.Target = other.transform; 
         }
     }
     public override void OnEnterState()

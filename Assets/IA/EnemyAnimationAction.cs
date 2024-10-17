@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyAnimationAction : AIAction
 {
     public override void PerformAction() { }
+
     public override void OnEnterState()
     {
         base.OnEnterState();

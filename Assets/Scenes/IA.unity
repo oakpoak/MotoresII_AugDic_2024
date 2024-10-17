@@ -856,13 +856,12 @@ MonoBehaviour:
   - StateName: TargetFollow
     Actions:
     - {fileID: 1196833173}
-    - {fileID: 0}
     Transitions:
     - Decision: {fileID: 1196833177}
       TrueState: Idle
       FalseState: 
     - Decision: {fileID: 1196833178}
-      TrueState: 
+      TrueState: Idle
       FalseState: 
   BrainActive: 1
   TimeInThisState: 0
@@ -970,7 +969,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Label: 
-  maxTime: 0
+  maxTime: 5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

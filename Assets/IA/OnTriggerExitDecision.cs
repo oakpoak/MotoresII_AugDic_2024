@@ -1,28 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class OnTriggerExitDecision : AIDecision
 {
-    private bool hasPlayerEnter;
+    private bool hasPlayerExit;
     public override bool Decide()
     {
-        return hasPlayerEnter;
+        return hasPlayerExit;
+
+    }
+    public void Inicialization()
+    {
+        hasPlayerExit = false;
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag== "Player")
+        if (other.gameObject.tag == "Player" && _brain.Target != null)
         {
-            hasPlayerEnter = false;
-            
-
+            hasPlayerExit = true;
+            _brain.Target = null;
         }
     }
-    public override void OnExitState()
+    public override void OnEnterState()
     {
-        base.OnExitState();
-        hasPlayerEnter = true;
+        base.OnEnterState();
+        hasPlayerExit = false;
     }
+
 }
