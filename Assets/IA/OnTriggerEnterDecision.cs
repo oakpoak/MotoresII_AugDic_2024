@@ -19,9 +19,10 @@ public class OnTriggerEnterDecision : AIDecision
             hasPlayerEnter = true;
         }
     }
-    public override void OnExitState()
+    public override void OnEnterState()
     {
-        base.OnExitState();
+        base.OnEnterState();
         hasPlayerEnter = false;
     }
+
 }
