@@ -826,6 +826,8 @@ GameObject:
   - component: {fileID: 1196833177}
   - component: {fileID: 1196833176}
   - component: {fileID: 1196833178}
+  - component: {fileID: 1196833180}
+  - component: {fileID: 1196833179}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -858,9 +860,16 @@ MonoBehaviour:
     - {fileID: 1196833173}
     Transitions:
     - Decision: {fileID: 1196833177}
-      TrueState: Idle
+      TrueState: ReturnOrigin
       FalseState: 
     - Decision: {fileID: 1196833178}
+      TrueState: ReturnOrigin
+      FalseState: 
+  - StateName: ReturnOrigin
+    Actions:
+    - {fileID: 1196833180}
+    Transitions:
+    - Decision: {fileID: 1196833179}
       TrueState: Idle
       FalseState: 
   BrainActive: 1
@@ -970,6 +979,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Label: 
   maxTime: 5
+--- !u!114 &1196833179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196833168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9467b7c473684ee4d91cf7eb83ec6c85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Label: 
+  originPos: {x: 0, y: 0, z: 0}
+--- !u!114 &1196833180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196833168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0831a963f5347d5409b2b4f4d48eab78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Label: 
+  originPos: {x: 0, y: 0, z: 0}
+  speed: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
